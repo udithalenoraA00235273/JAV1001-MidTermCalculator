@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Calc</string>
 
+    <!-- Assigning text's for Buttons and Text View -->
+
+    <string name="answer">0</string>
     <string name="zero">0</string>
-    <string name="doubleZero">00</string>
+    <string name="double_zero">00</string>
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
@@ -20,5 +23,7 @@
     <string name="equal">=</string>
     <string name="clear">AC</string>
     <string name="decimal">.</string>
-    <string name="erase">--</string>
+    <string name="erase">C</string>
+    <string name="exponent">^</string>
+    <string name="square_root">√</string>
 </resources>
