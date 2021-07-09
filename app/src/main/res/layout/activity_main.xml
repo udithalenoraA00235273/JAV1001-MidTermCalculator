@@ -26,6 +26,7 @@
         <!-- Creating buttons in the first row -->
             <Button
                 android:id="@+id/seven"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -37,6 +38,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/eight"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -48,6 +50,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/nine"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -59,6 +62,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/plus"
+                android:onClick="userOperator"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -78,6 +82,7 @@
         <!-- Creating Buttons in the second row -->
             <Button
                 android:id="@+id/four"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -89,6 +94,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/five"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -100,6 +106,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/six"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -111,6 +118,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/minus"
+                android:onClick="userOperator"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -130,6 +138,7 @@
         <!-- Creating buttons in the third row -->
             <Button
                 android:id="@+id/one"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -141,6 +150,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/two"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -152,6 +162,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/three"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -163,6 +174,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/multiply"
+                android:onClick="userOperator"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -182,6 +194,7 @@
         <!-- Creating buttons in the fourth row -->
             <Button
                 android:id="@+id/zero"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -193,6 +206,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/decimal"
+                android:onClick="userNumber"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -204,6 +218,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/equal"
+                android:onClick="userResult"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -216,6 +231,7 @@
                 android:textSize="45sp" />
             <Button
                 android:id="@+id/divide"
+                android:onClick="userOperator"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
@@ -229,11 +245,6 @@
     </TableLayout>
 
     <!-- Text view to display the answer -->
-
-    <!-- Button to clear the content -->
-
-    <!-- Text view to display the user input -->
-
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
@@ -248,8 +259,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Button to clear the content -->
     <Button
         android:id="@+id/clear"
+        android:onClick="emptyEvent"
         style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
         android:layout_width="94dp"
         android:layout_height="57dp"
@@ -265,20 +278,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answer"
         app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input"
-        android:textAlignment="textEnd"
-        android:textColor="#f7f3f2"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/answer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
