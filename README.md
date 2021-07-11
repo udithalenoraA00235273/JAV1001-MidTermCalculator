@@ -9,7 +9,7 @@ Mulitiple calculations can be done too. As a example :
   If user wants to do 500 + 6 - 2 it can be done using two steps.
   
   1. User have to do the 500 + 6 and hit equal button.
-  2. Then user can touch the minus button (506 - 2 and touch the equal button.
+  2. Then user can touch the minus button (506 - 2) and touch the equal button.
   
   
 !!!! Things to be considered !!!!
