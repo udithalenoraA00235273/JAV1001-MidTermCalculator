@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // declaring the function to handle the user events for number buttons
-    @SuppressLint("NonConstantResourceId")
     public void userNumber(View view) {
         if(isUserOperator)
             result.setText("");
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 number += "6";
                 break;
             case R.id.seven:
-            number += "7";
+                number += "7";
             break;
             case R.id.eight:
                 number += "8";
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Declaring the function to handle the operator buttons
-    @SuppressLint("NonConstantResourceId")
     public void userOperator(View view) {
         isUserOperator = true;
         existingNumber = result.getText().toString();
@@ -99,30 +97,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Declaring the function to handle the answer
-    @SuppressLint("SetTextI18n")
     public void userResult(View view) {
         String outputNumber = result.getText().toString();
-
-        // Big decimal is use to get the precise value when doing decimal maths
-        BigDecimal one = new BigDecimal(existingNumber);
-        BigDecimal two = new BigDecimal(outputNumber);
-
-        BigDecimal finalResult = new BigDecimal("0");
+         double finalResult = 0.0;
         switch (operator){
             case "+":
-                finalResult = one.add(two);
+                finalResult = Double.parseDouble(existingNumber) + Double.parseDouble(outputNumber);
                 break;
             case "-":
-                finalResult = one.subtract(two);
+                finalResult = Double.parseDouble(existingNumber) - Double.parseDouble(outputNumber);
                 break;
             case "x":
-                finalResult = one.multiply(two);
+                finalResult = Double.parseDouble(existingNumber) * Double.parseDouble(outputNumber);
                 break;
             case "÷":
-                finalResult = one.divide(two);
+                finalResult = Double.parseDouble(existingNumber) / Double.parseDouble(outputNumber);
                 break;
         }
-        result.setText(finalResult+"");
+        result.setText(finalResult+ "");
     }
 
     public void emptyEvent(View view) {
